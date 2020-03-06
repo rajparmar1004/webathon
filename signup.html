@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SignUp</title>
+<style>
+body, html {
+    height: 100%;
+    font-family: Arial;
+}
+body{
+	background-color:lightgrey;
+	}
+
+
+*{
+    box-sizing: border-box;
+}
+.hh1{
+	border:2px solid black;
+	text-align:center;
+	border-radius:5px;
+	margin:20px 10px;
+	}
+.container {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    position: absolute;
+    left:500px;
+    margin: 20px;
+	width:350px;
+    padding: 16px;
+	background:grey;
+	border:2px solid black;
+	border-radius:10px;
+	}
+.input1[type=Email], input[type=password], input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+}
+
+.input1[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+
+}
+
+.btn {
+    background-color:blue;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.5;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+	 border-radius:15px;
+}
+
+.btn:hover {
+    opacity: 1;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+	 border-radius:15px;
+}
+
+.a1{
+	text-decoration:none;
+	color:black;
+	}
+
+</style>
+<script>
+</script>
+
+</head>
+<body>
+<div class="img5">
+  <form class="container">
+    <h1 class="hh1"><marquee>SignUp</marquee></h1>
+	<label for="First Name"><b>First Name</b></label>
+    <input type="Text" placeholder="Enter First Name" name="First Name" required class="input1">
+	
+	<label for="First Name"><b>Last Name</b></label>
+    <input type="Text" placeholder="Enter Last Name" name="Last Name" required class="input1">
+	
+    <label for="email"><b>Email</b></label>
+    <input type="Email" placeholder="Enter Email" name="email" required class="input1">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required class="input1">
+
+    <button type="submit" class="btn">SignUp</button>
+	</form>
+</div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TAGSTUDY</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+
+        <div class="header-left">
+          <p id="heading">TAG STUDY</p>
+        </div>
+        
+        <div class="header-right">
+          <a href="signup.html" target="_blank">Sign up</a>
+          <a href="login.html" target="_blank" class="login">Log in</a>
+          
+        </div>
+
+      </div>
+    </header>
+    <h2 id="pid1"><marquee>WE GIVES WINGS TO YOUR EDUCATION YOU DECIDE WERE TO FLY......</marquee></h2>
+
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>Tag Study Website</h1>
+        <h1>Learn HTML-CSS-JS</h1>
+        <p>This website will teach you the web developement</p>
+        
+
+<h1>Welcome to the world of
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "HTML.", "CSS>", "pure JS.", "fun!" ]'></span>
+</h1>
+
+        
+      </div>
+    </div>
+  
+    <div class="middle-wrapper">
+
+      <div class="flex-container">
+        <div><a href="notes.html" target="_blank">Notes</a></div>
+        <div><a href="book.html" target="_blank">Books</a></div>
+        <div><a href="#">Videos</a></div>
+        <div><a href="#">Instant Compiler</a></div>
+      </div>
+      
+    </div>
+
+    <div>
+      <table align="center" width="100%" border="0">
+        <tr>
+          <td>
+            <b>HTML</b>
+
+          </td>
+          <td>
+            <b>CSS</b>
+          </td>
+          <td>
+            <b>JS</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="html">
+            <p>HTML-Hyper Text Markup Language</p><img src="HTML5_Logo.png" height="100px" width="100px">
+            <p>HTML is the standard markup language for Web pages.</p>
+            <p>With HTML you can create your own Website with basic functionalities</p>
+            <p>HTML is easy to learn - You will enjoy it!</p>
+          </td>
+          <td class="css">
+            <p>CSS-Cascading Style Sheet</p><img src="CSS4.png" height="100px" width="70px">
+            <p>CSS is a language that describes the style of an HTML document.</p>
+            <p> CSS describes how HTML elements should be displayed.</p>
+            <p>CSS decorates your HTML Page</p>
+          </td>
+          <td class="js">
+           <p>JS-JavaScript</p><img src="JS.png" height="100px" width="100px">
+           <p>JavaScript is easy to learn.</p>
+           <p>Using javascript you can put different fuctionalities</p>
+           <p>JavaScript is the programming language of HTML and the Web.</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <footer>
+
+      <div class="container">
+        <img src="">
+        <div class="footerl">
+        <p>Code. Sleep. Repeat.</p>
+        <p>Contact us for any quaries</p>
+        </div>
+        <div class="footerr">
+        <a href="contactus.html" target="_blank">Contact us</a>
+        <a href="aboutus.html" target="_blank">About us||</a>
+        </div>
+      </div>
+
+      
+
+    </footer>
+
+    <script type="text/javascript">
+      var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+    </script>
+  </body>
+</html>

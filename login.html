@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LogIn</title>
+<style>
+body, html {
+    height: 100%;
+    font-family: Arial;
+}
+body{
+	background-color: lightgrey;
+	}
+
+
+*{
+    box-sizing: border-box;
+}
+.l{
+    text-align: center;
+}
+.hh1{
+	border:2px solid black;
+	text-align:center;
+	border-radius:5px;
+	margin:20px 10px;
+	}
+
+.container {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    position: absolute;
+    left:500px;
+    margin: 20px;
+	width:350px;
+    padding: 16px;
+	background: grey;
+	border:2px solid black;
+	border-radius:10px;
+	}
+.input1[type=Email], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+}
+
+.input1[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+
+}
+
+.btn {
+    background-color:blue;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.5;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+	 border-radius:15px;
+}
+
+.btn:hover {
+    opacity: 1;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+	 border-radius:15px;
+}
+.a1{
+	text-decoration:none;
+	color:black;
+	}
+
+</style>
+<script>
+function a()
+{
+if (document.getElementById("t1").value=="")
+ {
+    document.getElementById("t1").focus();
+    document.getElementById("t1").style.background="red"; 
+ }
+}
+
+function a1()
+{
+document.getElementById('t1').style.background='white';
+}
+
+function b()
+{
+if (document.getElementById("t2").value=="")
+ {
+    document.getElementById("t2").focus();
+    document.getElementById("t2").style.background="red"; 
+ }
+}
+
+function b1()
+{
+document.getElementById('t2').style.background='white';
+}
+
+
+</script>
+
+</head>
+<body>
+
+<div class="img5">
+  <form class="container">
+    <h1 class="hh1"><marquee>LogIn</marquee></h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="Email" placeholder="Enter Email" name="email" required class="input1" id="t1" onfocusout="a()" onchange="a1()">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required class="input1" id="t2" onfocusout="b()" onchange="b1()">
+
+    <button type="submit" class="btn">LogIn</button>
+	<h1></h1>
+	</form>
+
+</div>
+</div>
+</body>
+</html>
+
+

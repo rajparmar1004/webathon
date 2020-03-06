@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Code Pro', monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+.container {
+  
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  color:black;
+}
+
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background-image: url(https://www.elsetge.cat/myimg/f/165-1654433_she-reads-truth-and-i-do-too-background.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.top-wrapper h1 {
+  opacity: 1;
+  font-size: 45px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  color: black; 
+}
+
+.top-wrapper p {
+  opacity: 0.7;
+  margin-bottom: 3px;
+}
+
+
+
+
+
+
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: LightSlateGray;
+  position :relative;
+  top: 0;
+  z-index: 10;
+}
+
+
+
+.header-left {
+  float: left;
+}
+
+#heading
+{
+  font-size: 50px;
+  margin:0;
+  padding: 0;
+  font-family: 'Pacifico', cursive;
+  color: black;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  
+}
+
+.header-right a:hover {
+  
+}
+
+
+
+
+
+
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+#pid1{
+  color:CadetBlue;
+  background-color:LightGray;
+  text-align:center;
+  padding: 0;
+  margin: 0;
+  }
+tr{
+  text-align: center;
+}
+
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: LightSlateGray;
+  justify-content: center;
+  padding: 10px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 520px;
+  margin: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.flex-container div : hover
+{
+  opacity: 0.7;
+}
+footer a
+{
+  text-decoration: none;
+  color: grey;
+  float: right;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.footerl{
+  float: left;
+
+}
+
+.footerr
+{
+  float: right;
+}
+
+table
+{
+  margin-top: 25px;
+}
+
+td{
+  border-right: 1px solid black
+}
